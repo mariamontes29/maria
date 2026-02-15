@@ -1,35 +1,13 @@
 (()=>{
 
-    //string
-
-    const nombre:string = 'maria magdalena';
-    console.log(nombre);
-    //
-    let edad: number = 46;
-    console.log(edad + nombre);
-    //Boolean
-    const isWorking:boolean = false;
-    console.log(isWorking);
-    //object
-    const animal:object = {
-        name:"gato",
-        age:5,
-        isWorking:false
+    interface Circulo{
+        radio: number;
     }
-
-    console.log(animal);
-
-    //funciones 
-    function add(a:number, b:number):number {
-    return a+b;
+    function areacirculo(circulo:Circulo): void {
+        const area = Math.PI * Math.pow(circulo.radio,2);
+        console.log(area)
     }
-    const res = add (5,10);
-    console.log (res);
-    function calName(persona:string):string{
-        return `mi nombre es ${persona}`
-    }
+areacirculo ({radio: 10});
 
-    const dd  =  calName("Mari");
-    console.log(dd)
 })();
 
